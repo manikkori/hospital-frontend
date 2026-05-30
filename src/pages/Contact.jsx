@@ -22,7 +22,7 @@ const Contact = () => {
     
     try {
       // Connect to your Node.js Backend
-      const response = await axios.post('http://localhost:5000/api/inquiries', formData);
+      const response = await axios.post('https://hospital-backend-ttza.onrender.com/api/inquiries', formData);
       if (response.data.success) {
         setStatus('success');
         setFormData({ name: '', email: '', subject: '', message: '' });

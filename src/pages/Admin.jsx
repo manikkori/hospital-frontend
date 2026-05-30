@@ -17,7 +17,7 @@ const Admin = () => {
 
     const fetchData = async () => {
       try {
-        const res = await axios.get('http://localhost:5000/api/inquiries');
+        const res = await axios.get('https://hospital-backend-ttza.onrender.com/api/inquiries');
         setInquiries(res.data);
       } catch (error) {
         console.error("Data fetch error:", error);
@@ -38,7 +38,7 @@ const Admin = () => {
   const handleDelete = async (id) => {
     if (window.confirm("Are you sure you want to delete this message?")) {
       try {
-        await axios.delete(`http://localhost:5000/api/inquiries/${id}`);
+        await axios.delete(`https://hospital-backend-ttza.onrender.com/api/inquiries/${id}`);
         // Remove deleted item from UI without reloading
         setInquiries(inquiries.filter((item) => item._id !== id));
       } catch (error) {
