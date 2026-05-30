@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-slate-50 text-slate-800 transition-colors duration-300 dark:bg-hospital-darker dark:text-slate-200;
+}
