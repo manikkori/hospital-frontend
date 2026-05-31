@@ -3,15 +3,15 @@ import { Link } from 'react-router-dom';
 
 const Home = () => {
   return (
-    <div className="flex flex-col min-h-[calc(100vh-80px)] overflow-hidden">
+    <div className="flex flex-col min-h-[calc(100vh-80px)] overflow-hidden bg-white dark:bg-slate-950">
       
-      {/* Hero Section */}
-      <section className="relative w-full pt-10 pb-16 md:pt-20 md:pb-32">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      {/* Hero Section - Updated for Mobile Full Screen */}
+      <section className="relative w-full flex-1 flex items-center justify-center py-12 md:py-20 min-h-[calc(100vh-80px)]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
           <div className="grid lg:grid-cols-2 gap-10 md:gap-16 items-center">
             
             {/* Text Content */}
-            <div className="space-y-6 md:space-y-8 text-center lg:text-left">
+            <div className="space-y-6 md:space-y-8 text-center lg:text-left flex flex-col justify-center">
               <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-md bg-hospital-light dark:bg-slate-900 text-hospital-teal text-xs md:text-sm font-semibold border border-hospital-teal/20 mx-auto lg:mx-0">
                 <span className="flex h-2 w-2 rounded-full bg-hospital-teal animate-pulse"></span>
                 24/7 Advanced Emergency Care
@@ -50,21 +50,23 @@ const Home = () => {
                       <Activity className="w-6 h-6 md:w-8 md:h-8 text-hospital-teal mb-2" />
                       <div className="font-bold text-sm md:text-base dark:text-white">ICU Setup</div>
                     </div>
-                    {/* Replaced empty box with real image */}
+                    {/* Stable Pexels Image 1 */}
                     <div className="h-40 md:h-48 rounded-lg overflow-hidden border border-slate-100 dark:border-slate-800 relative group">
                       <img 
-                        src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=800&auto=format&fit=crop" 
+                        src="https://images.pexels.com/photos/236380/pexels-photo-236380.jpeg?auto=compress&cs=tinysrgb&w=800" 
                         alt="Hospital Building" 
+                        loading="lazy"
                         className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                       />
                     </div>
                   </div>
                   <div className="space-y-4 pt-8">
-                    {/* Replaced empty box with real image */}
+                    {/* Stable Pexels Image 2 */}
                     <div className="h-40 md:h-48 rounded-lg overflow-hidden border border-slate-100 dark:border-slate-800 relative group">
                        <img 
-                        src="https://images.unsplash.com/photo-1581594693702-fbdc51b2763b?q=80&w=800&auto=format&fit=crop" 
+                        src="https://images.pexels.com/photos/3845129/pexels-photo-3845129.jpeg?auto=compress&cs=tinysrgb&w=800" 
                         alt="Surgery Team" 
+                        loading="lazy"
                         className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                       />
                     </div>
