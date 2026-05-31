@@ -127,17 +127,29 @@ const Contact = () => {
               </div>
 
               <div>
+<<<<<<< HEAD
                 <label className="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-2">Phone Number</label>
                 <input 
                   type="tel" 
                   name="phone"
                   value={formData.phone}
+=======
+                <label className="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-2">Phone no.</label>
+                <input 
+                  type="tel" 
+                  name="tel"
+                  value={formData.email}
+>>>>>>> 4a43310ca06fa4bb54229468b44640325b068157
                   onChange={handleChange}
                   required
                   pattern="[0-9]{10}"
                   title="Please enter a valid 10-digit phone number"
                   className="w-full bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-lg px-4 py-3 text-sm text-slate-900 dark:text-white focus:outline-none focus:border-hospital-teal focus:ring-1 focus:ring-hospital-teal transition-colors"
+<<<<<<< HEAD
                   placeholder="9876543210"
+=======
+                  placeholder="+91 __________"
+>>>>>>> 4a43310ca06fa4bb54229468b44640325b068157
                 />
               </div>
 
