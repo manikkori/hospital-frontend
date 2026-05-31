@@ -5,7 +5,7 @@ import axios from 'axios';
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
-    email: '',
+    phone: '',
     subject: '',
     message: ''
   });
@@ -25,7 +25,7 @@ const Contact = () => {
       const response = await axios.post('https://hospital-backend-ttza.onrender.com/api/inquiries', formData);
       if (response.data.success) {
         setStatus('success');
-        setFormData({ name: '', email: '', subject: '', message: '' });
+        setFormData({ name: '', phone: '', subject: '', message: '' });
         
         // Reset success message after 3 seconds
         setTimeout(() => setStatus('idle'), 3000);
@@ -127,15 +127,17 @@ const Contact = () => {
               </div>
 
               <div>
-                <label className="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-2">Email Address</label>
+                <label className="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-2">Phone Number</label>
                 <input 
-                  type="email" 
-                  name="email"
-                  value={formData.email}
+                  type="tel" 
+                  name="phone"
+                  value={formData.phone}
                   onChange={handleChange}
                   required
+                  pattern="[0-9]{10}"
+                  title="Please enter a valid 10-digit phone number"
                   className="w-full bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-lg px-4 py-3 text-sm text-slate-900 dark:text-white focus:outline-none focus:border-hospital-teal focus:ring-1 focus:ring-hospital-teal transition-colors"
-                  placeholder="john@example.com"
+                  placeholder="9876543210"
                 />
               </div>
 
