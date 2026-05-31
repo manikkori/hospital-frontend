@@ -127,10 +127,10 @@ const Contact = () => {
               </div>
 
               <div>
-                <label className="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-2">Email Address</label>
+                <label className="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-2">Phone no.</label>
                 <input 
-                  type="email" 
-                  name="email"
+                  type="tel" 
+                  name="tel"
                   value={formData.email}
                   onChange={handleChange}
                   required
